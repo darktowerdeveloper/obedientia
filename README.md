@@ -1,8 +1,8 @@
-# dt_landingpages
-Landing page development repository.
+# Obedientia
+Landing page Obedientia album repository.
 
 ---
 
 ### Homologation
 
-[https://darktowerdeveloper.github.io/dt_landingpages/](https://darktowerdeveloper.github.io/dt_landingpages/)
+[https://darktowerdeveloper.github.io/obedientia/]( https://darktowerdeveloper.github.io/obedientia/)
