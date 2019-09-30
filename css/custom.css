@@ -58,7 +58,7 @@ a, a:hover{
 /* ENTER */
 
 .enter {
-    background-image: url('../img/enter/bg_enter.jpg');
+    background-image: url('../img/enter/bg_entrada.jpg');
     background-position: 50% 50%;
     width: 100%;
     height: 100vh;
@@ -91,49 +91,49 @@ _:-ms-input-placeholder, :root .enter__content {
 .enter__content-lang-link .btn-enter {
     cursor: pointer;
     display: inline-block;
-    background-color: #000;
-    border: 1.5px solid #a99b68;
+    background-color: transparent;
+    /* border: 1.5px solid #a99b68; */
+    border: 1.5px solid #571e20;
     border-radius: 0;
     text-decoration: none;
     text-align: center;
     word-spacing: -10px;
     transition: 250ms;
-    padding: 8px 25px 0;
+    padding: 6px 25px 0px;
     font-size: 3rem;
-    color: #a99b68;
+    color: #571e20;
+    letter-spacing: 1px;
+    line-height: 25px;
 }
 .enter__content-lang-link .btn-enter:hover,
 .enter__content-lang-link .btn-enter:active,
 .enter__content-lang-link .btn-enter:focus {
-    background-color: #a99b68;
-    color: #000;
+    background-color: #571e20;
+    color: white;
 }
 .enter__content-lang-link span {
     display: block;
     font-size: 1rem;
     font-weight: 300;
-    color: #abaeb2;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #571e20;
     margin-top: 5px;
 }
 .enter__content-social {
-    width: 180px;
+    width: 150px;
     margin: 25px auto 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-@media (min-width: 992px) {
-    .enter__content-social {
-        width: 160px;
-    }
-}
 .enter__content-social .nav-social-link {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     margin-right: 20px;
 }
 .enter__content-social .nav-social-link:last-child {
