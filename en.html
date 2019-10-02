@@ -80,11 +80,7 @@
                         <p><span>an exclusive poster, hand-signed by the</span></p>
                         <p><span>band and guitar picks!</span></p>
                     </div>
-                    <nav>
-                        <a class="font-killig" href="#" target="_blank">paypal</a>
-                        <a class="font-killig" href="#" target="_blank">pagseguro</a>
-                        <a class="font-killig" href="#" target="_blank">picpay</a>
-                    </nav>
+                    <a class="font-killig btn-buy" href="#formBuy" target="_blank">buy</a>
                 </div>
             </div>
             <div class="obedientia__supporting">
@@ -99,11 +95,42 @@
                     </div>
                 </div>
             </div>
+            <div class="obedientia__formBuy">
+                <p>
+                    Complete the form below and we'll return as soon as possible with 
+                    the shipping cost and time and a paypal link to make the payment.
+                </p>
+                <form name="formBuy" id="formBuy" method="post">
+                    <div class="obedientia__formGroup">
+                        <div>
+                            <input id="formName" name="formName" type="text" placeholder="Name">
+                        </div>
+                        <div>
+                            <input id="formEmail" name="formEmail" type="email" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <input id="formAdress" class="formAdress" name="formAdress" type="text" placeholder="Complete Adress">
+                    <div class="obedientia__formGroup">
+                        <div>
+                            <input id="formCountry" name="formCountry" placeholder="Country">
+                        </div>
+                        <div>
+                            <input id="formZipcode" name="formZipcode" placeholder="Zipcode">
+                        </div>
+                    </div>
+                    <input id="submit" type="submit" value="submit">
+                </form>
+            </div>
         </section>
 
         <footer><span>© 2019 - darktower - All rights reserved</span></footer>
 
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/custom.js"></script>
     
 </body>
 </html>

@@ -32,6 +32,10 @@ body {
     text-transform: lowercase;
 }
 
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
 /* GLOBAL CODE */
 
 h1, h2, h3, p {
@@ -92,7 +96,6 @@ _:-ms-input-placeholder, :root .enter__content {
     cursor: pointer;
     display: inline-block;
     background-color: transparent;
-    /* border: 1.5px solid #a99b68; */
     border: 1.5px solid #571e20;
     border-radius: 0;
     text-decoration: none;
@@ -265,33 +268,23 @@ _:-ms-input-placeholder, :root .enter__content {
     color: #e8c7c0;
     padding: 5px;
 }
-
-.obedientia__content-right nav{
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.obedientia__content-right nav a{
+.obedientia__content-right .btn-buy{
     cursor: pointer;
-    display: inline-block;
+    display: block;
+    line-height: 1;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 4px 0 2px;
     border: 1.5px solid #571e20;
     background: transparent;
     text-align: center;
-    word-spacing: -10px;
     transition: 250ms;
-    padding: 1px 25px 0;
     font-size: 3rem;
-    color: #571e20;
-    flex: 1;
-    margin: 0 20px 0 0;
+    color: #571e20;    
 }
-.obedientia__content-right nav a:last-of-type{
-    margin-right: 0;
-}
-.obedientia__content-right nav a:hover,
-.obedientia__content-right nav a:active,
-.obedientia__content-right nav a:focus{
+.obedientia__content-right .btn-buy:hover,
+.obedientia__content-right .btn-buy:active,
+.obedientia__content-right .btn-buy:focus{
     background: #571e20;
     color: white;   
 }
@@ -299,23 +292,8 @@ _:-ms-input-placeholder, :root .enter__content {
     .obedientia__content-right > div{
         display: none;
     }
-    .obedientia__content-right nav{
-        max-width: fit-content;
-        width: -webkit-fill-available;
-        width: -moz-fill-available;
-        flex-direction: column;
-        margin: 45px auto 40px;
-    }
-    .obedientia__content-right nav a{
-        flex: auto;
-        display: inline-block;
-        margin: 0 0 20px;
-        width: fill-available;
-        width: -webkit-fill-available;
-        width: -moz-fill-available;
-    }
-    .obedientia__content-right nav a:last-of-type{
-        margin-bottom: 0;
+    .obedientia__content-right .btn-buy{
+        margin: 0 auto 30px;
     }
 }
 
@@ -376,6 +354,132 @@ _:-ms-input-placeholder, :root .enter__content {
 _:-ms-input-placeholder, :root .obedientia__supporting-logo {
     max-height: 60px;
 }
+
+/* FORM BUY */
+
+.obedientia__formBuy{
+    display: block;
+    width: 100%;
+    background-color: #441819;
+}
+.obedientia__formBuy p{
+    width: 50%;
+    text-align: center;
+    font-size: 1.6rem;
+    /* color: #e9d1d2; */
+    color: #e8c7c0;
+    line-height: 1.3;
+    margin: 50px auto 30px;
+}
+.obedientia__formBuy form{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto 50px;
+}
+.obedientia__formBuy input:not([type=submit]){
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #7c5e5e;
+    padding-bottom: 10px;
+    color: #7c5e5e;
+}
+.obedientia__formBuy input:not([type=submit])::-webkit-input-placeholder { 
+    color: #7c5e5e; 
+}
+.obedientia__formBuy input:not([type=submit])::-moz-placeholder { 
+    color: #7c5e5e; 
+}
+.obedientia__formBuy input:not([type=submit]):-ms-input-placeholder { 
+    color: #7c5e5e; 
+}
+.obedientia__formBuy input:not([type=submit]):-moz-placeholder { 
+    color: #7c5e5e; 
+}
+.obedientia__formBuy .formAdress{
+    margin-bottom: 30px;
+}
+.obedientia__formBuy input:focus{
+    outline: none;
+}
+.obedientia__formBuy input[type=submit]{
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 8px 50px;
+    border: 1px solid #7c5e5e;
+    background: transparent;
+    color: #7c5e5e;    
+    transition: 250ms;
+}
+.obedientia__formBuy input[type=submit]:hover,
+.obedientia__formBuy input[type=submit]:active,
+.obedientia__formBuy input[type=submit]:focus{
+    background: #7c5e5e;
+    color: white;   
+}
+.obedientia__formGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+.obedientia__formGroup div:first-of-type {
+    flex: 1;
+    margin-right: 30px;
+}
+.obedientia__formGroup div:last-of-type {
+    flex-basis: 30%;
+}
+
+.obedientia__formBuy label[id$=-error]{
+    position: relative;
+    border-radius: 2px;
+    background-color: #ff6666;
+    color: white;
+    padding: 4px;
+    margin-top: 5px;
+}
+.obedientia__formBuy label[id$=-error]:after {
+    bottom: 100%;
+    left: 5%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 102, 102, 0);
+    border-bottom-color: #ff6666;
+    border-width: 8px;
+    margin-left: -8px;
+}
+@media (max-width: 768px) {
+    .obedientia__formGroup {
+        flex-direction: column;
+        align-items: initial;
+    }
+    .obedientia__formGroup div:first-of-type {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .obedientia__formGroup div:last-of-type {
+        flex-basis: 100%;
+    }
+}
+@media (max-width: 425px) {
+    .obedientia__formBuy p{
+        font-size: 1.2rem;
+    }
+    .obedientia__formBuy p,
+    .obedientia__formBuy form{
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+/* FOOTER */
 
 footer{
     flex: 1;
