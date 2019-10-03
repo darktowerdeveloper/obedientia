@@ -56,9 +56,9 @@
 </head>
 <body>
 
-    <div class="wrap">
+    <div class="wrap wrap--en">
 
-        <section class="obedientia">
+        <section class="obedientia obedientia-en">
             <div class="obedientia__content">
                 <div class="obedientia__content-left">
                     <div>
@@ -80,7 +80,7 @@
                         <p><span>an exclusive poster, hand-signed by the</span></p>
                         <p><span>band and guitar picks!</span></p>
                     </div>
-                    <a class="font-killig btn-buy" href="#formBuy" target="_blank">buy</a>
+                    <a class="font-killig btn-buy" href="#formBuy" target="_blank"><span>Buy on form</span></a>
                 </div>
             </div>
             <div class="obedientia__supporting">
@@ -95,32 +95,33 @@
                     </div>
                 </div>
             </div>
-            <div class="obedientia__formBuy">
-                <p>
-                    Complete the form below and we'll return as soon as possible with 
-                    the shipping cost and time and a paypal link to make the payment.
-                </p>
-                <form name="formBuy" id="formBuy" method="post">
-                    <div class="obedientia__formGroup">
-                        <div>
-                            <input id="formName" name="formName" type="text" placeholder="Name">
-                        </div>
-                        <div>
-                            <input id="formEmail" name="formEmail" type="email" placeholder="E-mail">
-                        </div>
+        </section>
+
+        <section class="obedientia__formBuy">
+            <p>
+                Complete the form below and we'll return as soon as possible with 
+                the shipping cost and time and a paypal link to make the payment.
+            </p>
+            <form name="formBuy" id="formBuy" method="post">
+                <div class="obedientia__formGroup">
+                    <div>
+                        <input id="formName" name="formName" type="text" placeholder="Name">
                     </div>
-                    <input id="formAdress" class="formAdress" name="formAdress" type="text" placeholder="Complete Adress">
-                    <div class="obedientia__formGroup">
-                        <div>
-                            <input id="formCountry" name="formCountry" placeholder="Country">
-                        </div>
-                        <div>
-                            <input id="formZipcode" name="formZipcode" placeholder="Zipcode">
-                        </div>
+                    <div>
+                        <input id="formEmail" name="formEmail" type="email" placeholder="E-mail">
                     </div>
-                    <input id="submit" type="submit" value="submit">
-                </form>
-            </div>
+                </div>
+                <input id="formAdress" class="formAdress" name="formAdress" type="text" placeholder="Complete Adress">
+                <div class="obedientia__formGroup">
+                    <div>
+                        <input id="formCountry" name="formCountry" placeholder="Country">
+                    </div>
+                    <div>
+                        <input id="formZipcode" name="formZipcode" placeholder="Zipcode">
+                    </div>
+                </div>
+                <input id="submit" type="submit" value="submit">
+            </form>
         </section>
 
         <footer><span>© 2019 - darktower - All rights reserved</span></footer>

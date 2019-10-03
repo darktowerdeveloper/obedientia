@@ -151,25 +151,34 @@ _:-ms-input-placeholder, :root .enter__content {
 /* LANDING */
 
 .wrap{
-    height: 100vh;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
+.wrap--pt-br{
+    height: 100vh;
+}
+.wrap--en{
+    height: auto;
+}
 @media (max-width: 768px) {
-    .wrap{
+    .wrap--pt-br{
         height: auto;
-        display: block;
     }
 }
 
 .obedientia{
-    height: auto;
     display: flex;
     flex-direction: column;
     background-image: url('../img/obedientia/obedientia_presale_img_04_bg.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    
+}
+.obedientia-pt-br{
+    height: auto;
     flex: 1;
 }
 @media (max-width: 768px) {
@@ -178,14 +187,25 @@ _:-ms-input-placeholder, :root .enter__content {
     }
 }
 
+.obedientia-pt-br .obedientia__content{
+    flex: 1;
+}
 .obedientia__content{
     display: flex;
     align-items: center;
-    flex: 1;
+}
+.obedientia-en .obedientia__content{
+    padding: 70px 0 40px;
+}
+_:-ms-input-placeholder, :root .obedientia-en .obedientia__content {
+    padding: 0;
 }
 @media (max-width: 768px) {
     .obedientia__content{
         flex-direction: column;
+    }
+    .obedientia-en .obedientia__content{
+        padding: 30px 0;
     }
 }
 
@@ -280,7 +300,22 @@ _:-ms-input-placeholder, :root .enter__content {
     text-align: center;
     transition: 250ms;
     font-size: 3rem;
-    color: #571e20;    
+    color: #571e20;
+    word-spacing: -10px;
+}
+.obedientia__content-right .btn-buy span:after{
+    height: 18px;
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-right: -12px;
+    margin-left: 5px;
+    content: '➝';
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari 3-8 */
+    transform: rotate(90deg);
+}
+_:-ms-input-placeholder, :root .obedientia__content-right .btn-buy span:after {
+    height: 25px;
 }
 .obedientia__content-right .btn-buy:hover,
 .obedientia__content-right .btn-buy:active,
@@ -298,7 +333,7 @@ _:-ms-input-placeholder, :root .enter__content {
 }
 
 .obedientia__supporting{
-    margin: 0 auto 20px;
+    margin: 0 auto 40px;
 }
 @media (max-width: 768px) {
     .obedientia__supporting{
@@ -375,8 +410,11 @@ _:-ms-input-placeholder, :root .obedientia__supporting-logo {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     margin: 0 auto 50px;
+}
+.obedientia__formBuy input {
+    font-size: 1.2rem;
 }
 .obedientia__formBuy input:not([type=submit]){
     width: 100%;
@@ -384,7 +422,8 @@ _:-ms-input-placeholder, :root .obedientia__supporting-logo {
     border: none;
     border-bottom: 1px solid #7c5e5e;
     padding-bottom: 10px;
-    color: #7c5e5e;
+    /* color: #7c5e5e; */
+    color: #e8c7c0;
 }
 .obedientia__formBuy input:not([type=submit])::-webkit-input-placeholder { 
     color: #7c5e5e; 
@@ -412,6 +451,9 @@ _:-ms-input-placeholder, :root .obedientia__supporting-logo {
     background: transparent;
     color: #7c5e5e;    
     transition: 250ms;
+}
+_:-ms-input-placeholder, :root .obedientia__formBuy input[type=submit] {
+    width: 150px;
 }
 .obedientia__formBuy input[type=submit]:hover,
 .obedientia__formBuy input[type=submit]:active,
@@ -482,7 +524,6 @@ _:-ms-input-placeholder, :root .obedientia__supporting-logo {
 /* FOOTER */
 
 footer{
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
