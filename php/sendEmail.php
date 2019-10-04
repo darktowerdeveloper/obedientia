@@ -18,6 +18,8 @@ if($_POST) {
 	$message .= "<strong>Origem:</strong> " . $formCountry . "<br />";
 	$message .= "<strong>Código postal:</strong> " . $formZipcode . "<br /><br />";
 	$message .= "E-mail enviado pelo site darktowerofficial.com/<br />";
+	
+	$subject = "Pedido de produto enviado via site!";
 
 	// Set From: header
 	$from =  $formName . " <" . $formEmail . ">";
@@ -28,8 +30,8 @@ if($_POST) {
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-	ini_set("sendmail_from", $siteOwnersEmail); // for windows server
-	$mail = mail($siteOwnersEmail, $message, $headers);
+	ini_set("sendmail_from", $siteOwnersEmail);
+	$mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
 	if($mail){
 		echo "<script>alert('Order dispatched. We will contact you soon.');</script>";
