@@ -401,7 +401,6 @@ _:-ms-input-placeholder, :root .obedientia__supporting-logo {
     width: 50%;
     text-align: center;
     font-size: 1.6rem;
-    /* color: #e9d1d2; */
     color: #e8c7c0;
     line-height: 1.3;
     margin: 50px auto 30px;
@@ -422,7 +421,6 @@ _:-ms-input-placeholder, :root .obedientia__supporting-logo {
     border: none;
     border-bottom: 1px solid #7c5e5e;
     padding-bottom: 10px;
-    /* color: #7c5e5e; */
     color: #e8c7c0;
 }
 .obedientia__formBuy input:not([type=submit])::-webkit-input-placeholder { 
@@ -437,15 +435,15 @@ _:-ms-input-placeholder, :root .obedientia__supporting-logo {
 .obedientia__formBuy input:not([type=submit]):-moz-placeholder { 
     color: #7c5e5e; 
 }
-.obedientia__formBuy .formAdress{
-    margin-bottom: 30px;
+.obedientia__formBuy input:not([type=submit]):-moz-placeholder { 
+    color: #7c5e5e; 
 }
 .obedientia__formBuy input:focus{
     outline: none;
 }
 .obedientia__formBuy input[type=submit]{
     cursor: pointer;
-    margin: 0 auto;
+    margin: 20px auto 0;
     padding: 8px 50px;
     border: 1px solid #7c5e5e;
     background: transparent;
@@ -464,8 +462,8 @@ _:-ms-input-placeholder, :root .obedientia__formBuy input[type=submit] {
 .obedientia__formGroup {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 30px;
+    align-items: flex-start;
+    margin: 30px 0;
 }
 .obedientia__formGroup div:first-of-type {
     flex: 1;
@@ -477,15 +475,19 @@ _:-ms-input-placeholder, :root .obedientia__formBuy input[type=submit] {
 
 .obedientia__formBuy label[id$=-error]{
     position: relative;
-    border-radius: 2px;
-    background-color: #ff6666;
-    color: white;
+    width: fit-content;
+    background-color: #e8c7c0;
+    color: #441819;
     padding: 4px;
     margin-top: 5px;
 }
+.obedientia__formGroup div input + label[id$=-error]{
+    margin-bottom: 10px;
+    display: block;
+}
 .obedientia__formBuy label[id$=-error]:after {
     bottom: 100%;
-    left: 5%;
+    left: 8px;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -493,7 +495,7 @@ _:-ms-input-placeholder, :root .obedientia__formBuy input[type=submit] {
     position: absolute;
     pointer-events: none;
     border-color: rgba(255, 102, 102, 0);
-    border-bottom-color: #ff6666;
+    border-bottom-color: #e8c7c0;
     border-width: 8px;
     margin-left: -8px;
 }
