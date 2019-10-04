@@ -29,8 +29,12 @@ $( document ).ready(function() {
         /* submit via ajax */
         submitHandler: function(form) {
             $.ajax({   	
-                type: "POST",
                 url: "php/sendEmail.php",
+                type: "POST",
+                crossDomain: true,
+                xhrFields: {
+                    withCredentials: true
+                },
                 data: $(form).serialize(),
             });    		
         },
