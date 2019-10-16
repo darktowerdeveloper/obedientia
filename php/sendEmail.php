@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'contact.darktower@gmail.com';
+$siteOwnersEmail = 'contact.darktower@gmail.com, perfildoug@gmail.com';
 
 if($_POST) {
 
